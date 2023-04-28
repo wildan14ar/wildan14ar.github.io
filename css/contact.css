@@ -1,0 +1,65 @@
+.container{
+    padding: 30px 5px;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.contact{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+}
+
+.contact div{
+    background-color: rgb(36, 36, 36);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.address{
+    max-width: 350px;
+    min-width: 240px;
+    width: 30%;
+}
+
+.sendmail{
+    width: 60%;
+    max-width: 750px;
+}
+
+.contact div div{
+    background-color: rgb(83, 83, 83);
+    height: calc(100% / 4.4);
+    width: 95%;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.contact input, textarea{
+    width: 46%;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(83, 83, 83);
+    margin: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+    .contact input{
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 650px) { 
+    .contact, .resume{
+        flex-direction: column;
+        padding: 5px;
+    }
+    .contact div, .contact input, .resume ul{
+        width: 95%;
+        margin: 10px;
+    }
+}

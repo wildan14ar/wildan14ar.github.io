@@ -1,0 +1,180 @@
+.container1{
+    width: 100%;
+    height: 90vh;
+}
+
+.intro{
+    position: absolute;
+    border: 6px solid var(--blue);
+    width: 45%;
+    height: 65%;
+    padding: 30px;
+    margin: 15vh 5%;
+}
+
+.container2{
+    background-color: var(--purple);
+    width: 100%;
+    text-align: center;
+    padding: 5%;
+}
+
+.container3{
+    text-align: center;
+    padding: 20px;
+    background-color: var(--purple);
+}
+
+.skill{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px;
+}
+
+.skill div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100px;
+    height: 120px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: var(--purple);
+    padding: 5px;
+}
+
+.skill img{
+    height: 45%;
+    margin: 10px;
+}
+
+.container4{
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.resume{
+    display: flex;
+    justify-content: center;
+}
+
+.resume ul{
+    width: 45%;
+    margin: 40px 5%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.resume li{
+    width: 95%;
+    background-color: var(--dark);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    text-align: justify;
+}
+
+.container5{
+    background-color: var(--purple);
+    width: 100%;
+    padding: 60px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container5 img{
+    height: 350px;
+    border-radius: 30px 0px;
+    margin: 20px;
+}
+
+.container{
+    padding: 30px 5px;
+    text-align: center;
+}
+
+.contact{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+}
+
+.contact div{
+    background-color: var(--dark);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.address{
+    max-width: 350px;
+    min-width: 240px;
+    width: 30%;
+}
+
+.sendmail{
+    width: 60%;
+    max-width: 750px;
+}
+
+.contact div div{
+    background-color: var(--gray);
+    height: calc(100% / 4.4);
+    width: 95%;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.contact input, textarea{
+    width: 46%;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--gray);
+    margin: 10px;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+}
+
+footer a{
+    padding: 18px;
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    margin: 20px 5px;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 900px) {
+    .contact input{
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 650px) { 
+    .intro{
+        width: 90%;
+    }
+    .skill img{
+        height: auto;
+        width: 55px;
+    }
+    .contact, .resume{
+        flex-direction: column;
+        padding: 5px;
+    }
+    .contact div, .contact input, .resume ul{
+        width: 95%;
+        margin: 10px;
+    }
+}

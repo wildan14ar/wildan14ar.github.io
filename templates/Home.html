@@ -1,0 +1,58 @@
+<head>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <div ng-include="'templates/coursel.htm'"></div>
+    <div class="container2 justy">
+        <div class="box">
+            <img src="img/capture.jpg" alt="">
+        </div>
+        <div>
+            <h2>About Me</h2>
+            <p>"Perkenalkan, nama saya Wildan Abdurrasyid, orang biasa memanggil saya "Wildan". Saya adalah seorang
+                pengembang di Indonesia yang memiliki minat dan keterampilan di Programming. Saya tinggal di Klaten, dan
+                memiliki pengalaman dalam Teknologi Informasi. Saya memiliki keahlian dalam Programming dan Networking,
+                dan telah Mengikuti berbagai pelatihan dalam bidang Teknologi Informasi. Saat ini saya adalah seorang
+                mahasiswa di ITTS Tangerang Selatan. Saat ini saya fokus dengan Kuliah dan membuat proyek kecil-kecilan.
+                Saat ini, saya memiliki portofolio desain web."</p>
+            <p>"Saya percaya diri dengan keterampilan saya. Saya merupakan orang yang dapat bekerjasama dan mengutamakan
+                tugas. Selain itu, saya juga berkomitmen untuk pengembangan diri dan terus belajar agar dapat
+                meningkatkan keterampilan dan pengetahuan saya.”</p>
+            <a href="#!Portofolio"><button class="btn btn-secondary">Portofolio</button></a>
+            <a href="#!About"><button class="btn btn-secondary">About</button></a>
+        </div>
+    </div>
+    <a href="#!Contact" style="position: fixed; bottom: 30px; right: 50px; z-index: 10;" data-bs-toggle="tooltip" data-bs-placement="top" title="Contact Me"><img src="img/contact.png" width="100px"></a>
+    <div ng-controller="tabs" class="container3">
+        <div class="tab box">
+            <button  ng-class="{active: selectedTab === tab}" ng-repeat="tab in tabs" ng-click="selectTab(tab)">{{tab.title}}</button>
+        </div>
+        <div class="tab-content box" ng-class="{active: selectedTab === tab}" ng-repeat="tab in tabs">
+            <h3>{{tab.title}}</h3>
+            <p>{{tab.content}}</p>
+            <a href="#!{{tab.title}}"><button class="btn btn-secondary">{{tab.title}}</button></a>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center flex-wrap" ng-controller="listPB" ng-include="'templates/listPB.htm'"></div>
+    <div class="container4">
+        <div class="address">
+            <div><h5>Address</h5><p>Klaten, Umbulharjo, Gumulan, Klaten Tengah, Klaten Regency, Central Java 57417</p></div>
+            <div><h5>Number</h5><p>+62 878 - 2994 - 4395</p></div>
+            <div><h5>Gmail</h5><p>wildan1423ar@gmail.com <br> code14ar@gmail.com</p></div>
+            <div><h5>Sosial Media</h5><p>linkedin/Twitter/Instagram:<br>@wildan14ar</p></div>
+        </div>
+    </div>
+    <footer>
+        <hr style="width: 90%; margin: 20px auto;">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <br>
+        <h5>Thanks for Attention to of all, I'm happy for You</h5>
+        <p>Copyright &copy; 2022. WILDAN ABDURRASYID</p>
+    </footer>
+</body>
+
+</html>
