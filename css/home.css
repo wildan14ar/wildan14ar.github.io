@@ -84,7 +84,7 @@ footer a{
   .slideshow{
     height: 65vmax;
   }
-  .container3, .container2{
+  .container3, .container2, .container4{
     flex-direction: column;
     width: 100%;
     border-radius: 0px;
@@ -92,5 +92,11 @@ footer a{
   .box{
     width: 100%;
     padding: 10px 0px;
+  }
+  .address{
+    flex-direction: column;
+  }
+  .address div{
+    width: 95%;
   }
 }

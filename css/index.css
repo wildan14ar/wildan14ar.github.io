@@ -20,7 +20,8 @@ body {
     min-height: 110vh;
 }
 
-nav {
+.navbar {
+    position: absolute;
     z-index: 10;
 }
 
@@ -47,5 +48,9 @@ nav {
 @media only screen and (max-width: 600px) {
     .box{
         width: 100%;
+    }
+    .navbar{
+        position: static;
+        text-align: center;
     }
 }
