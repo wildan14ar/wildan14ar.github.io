@@ -1,15 +1,18 @@
-.container1{
+.intro{
     width: 100%;
-    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.intro{
-    position: absolute;
+.intro div{
     border: 6px solid var(--blue);
-    width: 45%;
-    height: 65%;
+    min-width: 45%;
+    min-height: 400px;
     padding: 30px;
-    margin: 15vh 5%;
+    margin: 5vmax;
+    margin-top: 11vmax;
+    margin-right: 45%;
 }
 
 .container2{
@@ -161,9 +164,9 @@ footer a{
     }
 }
 
-@media only screen and (max-width: 650px) { 
-    .intro{
-        width: 90%;
+@media only screen and (max-width: 600px) { 
+    .intro div{
+        margin: 20px;
     }
     .skill img{
         height: auto;

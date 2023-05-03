@@ -2,19 +2,18 @@
     background-color: var(--purple);
     display: flex;
     width: 100%;
+    padding: 1%;
 }
 
-.container2 .box1{
-    width: 45%;
-    padding: 30px;
+.container2 div{
+    margin: 2% 2%;
+    width: 48%;
 }
 
 .container2 .box2{
-    width: 55%;
-    height: 100%;
-    background-color: transparent;
-    border-bottom:solid 500px var(--main);
-	border-left:solid 120px transparent;
+    background-color: var(--main);
+    border-radius: 20px;
+    min-height: 400px;
 }
 
 .container3{
@@ -80,4 +79,13 @@
 
 .container5{
     height: 300px;
+}
+
+@media only screen and (max-width: 1000px) { 
+    .container2{
+        flex-direction: column;
+    }
+    .container2 div{
+        width: 95%;
+    }
 }
