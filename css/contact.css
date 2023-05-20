@@ -3,6 +3,7 @@ iframe{
     width: 90%;
     height: 30vmax;
     border: solid white 2xp;
+    border-radius: 5px;
 }
 .container{
     padding: 30px 5px;
