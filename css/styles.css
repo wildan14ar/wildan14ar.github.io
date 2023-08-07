@@ -45,6 +45,32 @@ body {
     text-align: justify;
 }
 
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+footer div div {
+    width: 32%;
+    padding: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.vertical-line {
+    width: 2px;
+    padding: 0px;
+    background-color: rgba(214, 193, 211, 0.486);
+}
+
 @media only screen and (max-width: 600px) {
     .box{
         width: 100%;

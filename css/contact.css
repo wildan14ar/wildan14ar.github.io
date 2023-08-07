@@ -11,6 +11,22 @@ iframe{
     text-align: center;
 }
 
+.container ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+}
+
+.container li {
+    background-color: var(--gray);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+}
+
+
 .contact{
     width: 100%;
     display: flex;

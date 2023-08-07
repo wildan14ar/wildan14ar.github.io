@@ -11,3 +11,9 @@ app.controller('tabs', function ($scope) {
         $scope.selectedTab = tab;
     };
 });
+
+app.controller('Youtubes', function ($scope, $http) {
+    $http.get("https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UCWVIDWsXlOw1DQxpH_mlhFw&key=AIzaSyC7ASONDMW4_BuLUoFG0ZH5P3ixSvjiL7o").success(successCallback).then(function (response) {
+        $scope.DataYoutube = response.data.records;
+    });
+});

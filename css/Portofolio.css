@@ -1,11 +1,11 @@
-.intro{
+.intro {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.intro div{
+.intro div {
     border: 6px solid var(--blue);
     min-width: 45%;
     min-height: 400px;
@@ -15,20 +15,31 @@
     margin-right: 45%;
 }
 
-.container2{
+.intro ul {
+    padding: 10px 0px;
+    display: flex;
+}
+
+.intro i {
+    font-size: 25px;
+    margin: 0px 5px;
+
+}
+
+.container2 {
     background-color: var(--purple);
     width: 100%;
     text-align: center;
     padding: 5%;
 }
 
-.container3{
+.container3 {
     text-align: center;
     padding: 20px;
     background-color: var(--purple);
 }
 
-.skill{
+.skill {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -36,7 +47,7 @@
     margin: 10px;
 }
 
-.skill div{
+.skill div {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -49,22 +60,22 @@
     padding: 5px;
 }
 
-.skill img{
+.skill img {
     height: 45%;
     margin: 10px;
 }
 
-.container4{
+.container4 {
     padding: 20px 10px;
     text-align: center;
 }
 
-.resume{
+.resume {
     display: flex;
     justify-content: center;
 }
 
-.resume ul{
+.resume ul {
     width: 45%;
     margin: 40px 5%;
     display: flex;
@@ -72,7 +83,7 @@
     padding: 10px;
 }
 
-.resume li{
+.resume li {
     width: 95%;
     background-color: var(--dark);
     border-radius: 10px;
@@ -81,28 +92,29 @@
     text-align: justify;
 }
 
-.container5{
+.container5 {
     background-color: var(--purple);
     width: 100%;
     padding: 60px 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.container5 img{
-    height: 350px;
-    border-radius: 30px 0px;
+.container5 div{
+    display: flex;
+}
+
+.container5 img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
     margin: 20px;
 }
 
-.container{
+.container {
     padding: 30px 5px;
-    padding-top: 100px;
     text-align: center;
 }
 
-.contact{
+.contact {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -110,32 +122,33 @@
     margin: auto;
 }
 
-.contact div{
+.contact div {
     background-color: rgb(36, 36, 36);
     margin: 10px auto;
     padding: 15px;
     border-radius: 10px;
 }
 
-.address{
+.address {
     max-width: 350px;
     min-width: 240px;
     width: 30%;
 }
 
-.sendmail{
+.sendmail {
     width: 60%;
     max-width: 750px;
 }
 
-.contact div div{
+.contact div div {
     background-color: rgb(83, 83, 83);
     width: 95%;
     border-radius: 10px;
     margin: 10px auto;
 }
 
-.contact input, textarea{
+.contact input,
+textarea {
     width: 46%;
     height: 50px;
     border: none;
@@ -145,39 +158,31 @@
     resize: none;
 }
 
-footer{
-    text-align: center;
-    padding: 20px;
-}
-
-footer a{
-    padding: 18px;
-    height: 50px;
-    width: 50px;
-    background-color: black;
-    margin: 20px 5px;
-    border-radius: 50%;
-}
-
 @media only screen and (max-width: 900px) {
-    .contact input{
+    .contact input {
         width: 95%;
     }
 }
 
-@media only screen and (max-width: 600px) { 
-    .intro div{
+@media only screen and (max-width: 600px) {
+    .intro div {
         margin: 20px;
     }
-    .skill img{
+
+    .skill img {
         height: auto;
         width: 55px;
     }
-    .contact, .resume{
+
+    .contact,
+    .resume {
         flex-direction: column;
         padding: 5px;
     }
-    .contact div, .contact input, .resume ul{
+
+    .contact div,
+    .contact input,
+    .resume ul {
         width: 95%;
         margin: 10px auto;
     }
