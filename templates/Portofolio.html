@@ -39,12 +39,20 @@
         <h4>My Resume</h4>
         <div class="resume">
             <ul style="border-top: 8px solid white; border-left: 8px solid white;">
-                <label>CERTIFICATION</label>
+                <label>EXPERIENCE</label>
                 <li>
-                    <h5>Hafalan Juz 30, 29 dan 1</h5>
-                    <h6>2019 - 2022</h6>
-                    <p>Setification Al-Qur'an Juz 1, 29 dan 30 di SMK IT Ihsanul Fikri untuk penunjang kelulusan di
-                        sekolah Pondok Pesantren SMK IT Ihsanul Fikri.</p>
+                    <h5>Dicoding for University</h5>
+                    <h6>2023</h6>
+                    <p>Program Dicoding for University hadir untuk membantu mahasiswa/i Indonesia menjadi talenta
+                        digital berkualitas dan dapat berkontribusi maksimal di industri IT melalui beasiswa kelas-kelas
+                        favorit Dicoding.</p>
+                </li>
+                <li>
+                    <h5>DBS Foundation Coding Camp 2023</h5>
+                    <h6>2023</h6>
+                    <p>Pelatihan Back-End Developer, Kurikulum disusun oleh Dicoding bersama AWS beserta pelaku industri
+                        Back-End Development. Siswa dipersiapkan untuk menjadi Back-End Developer sesuai kebutuhan
+                        industri.</p>
                 </li>
                 <li>
                     <h5>Praktek Kerja industri</h5>
@@ -54,11 +62,10 @@
                         Programming dan Mikrotik MTCNA. Pelatihan tersebut berlangsung selama 2 bulan.</p>
                 </li>
                 <li>
-                    <h5>DBS Foundation Coding Camp 2023</h5>
-                    <h6>2023</h6>
-                    <p>Pelatihan Back-End Developer, Kurikulum disusun oleh Dicoding bersama AWS beserta pelaku industri
-                        Back-End Development. Siswa dipersiapkan untuk menjadi Back-End Developer sesuai kebutuhan
-                        industri.</p>
+                    <h5>Hafalan Juz 30, 29 dan 1</h5>
+                    <h6>2019 - 2022</h6>
+                    <p>Setification Al-Qur'an Juz 1, 29 dan 30 di SMK IT Ihsanul Fikri untuk penunjang kelulusan di
+                        sekolah Pondok Pesantren SMK IT Ihsanul Fikri.</p>
                 </li>
             </ul>
             <ul style="border-bottom: 8px solid white; border-right: 8px solid white;">
@@ -133,6 +140,9 @@
                 <div><img src="img/bootstrap.png" alt="Bootstrap">
                     <h6>Bootstrap</h6>
                 </div>
+                <div><img src="img/sql.png" alt="sql">
+                    <h6>sql</h6>
+                </div>
             </div>
     </div>
     <div class="container4">
@@ -140,10 +150,14 @@
         <div class="d-flex justify-content-center flex-wrap" ng-controller="listPB" ng-include="'templates/listPB.htm'">
         </div>
     </div>
-    <div ng-controller="Youtubes" class="container5">
+    <div ng-controller="youtubeController" class="container5">
         <h4>Youtube Channel</h4>
-        <div ng-repeat="x in DataYoutube">
-            <h5>{{x.items.snippet.title}}</h5>
+        <div>
+            <img ng-src="{{ channelLogo }}" alt="Logo Channel" style="width: 150px; height: auto;">
+            <div style="display: flex; flex-direction: column; padding-top: 30px;">
+                <h2>{{ channelName }}</h2>
+                <p><span style="background-color: white; padding: 2px 5px; color: black;">{{ subscriberCount }}</span><span style="background-color: red; padding: 2px 5px;">Subscribers</span></p>
+            </div>
         </div>
     </div>
     <div class="container">
@@ -183,9 +197,10 @@
         <div style="text-align: left; ">
             <div>
                 <h5>About</h5>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos inventore vel culpa facilis beatae, modi, fugit neque exercitationem laboriosam commodi expedita ipsam quae, quod quibusdam officiis! Exercitationem alias quaerat libero.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos inventore vel culpa facilis
+                    beatae, modi, fugit neque exercitationem laboriosam commodi expedita ipsam quae, quod quibusdam
+                    officiis! Exercitationem alias quaerat libero.</p>
             </div>
-            <div class="vertical-line"></div>
             <div>
                 <h5>Links</h5>
                 <a href="">Home</a>
@@ -194,11 +209,9 @@
                 <a href="">Experience</a>
                 <a href="">Contact</a>
             </div>
-            <div class="vertical-line"></div>
             <div>
                 <h5>Services</h5>
             </div>
-            <div class="vertical-line"></div>
             <div>
                 <h5>Have a Questions?</h5>
             </div>
