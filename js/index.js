@@ -12,19 +12,40 @@ app.controller('tabs', function ($scope) {
     };
 });
 
-app.controller('youtubeController', function($scope, $http) {
+app.controller('youtubeController', function ($scope, $http) {
     var url = 'https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UCWVIDWsXlOw1DQxpH_mlhFw&key=AIzaSyC7ASONDMW4_BuLUoFG0ZH5P3ixSvjiL7o';
 
     $http.get(url)
-        .then(function(response) {
+        .then(function (response) {
             var data = response.data;
             var channel = data.items[0];
-            
+
             $scope.channelName = channel.snippet.title;
             $scope.channelLogo = channel.snippet.thumbnails.default.url;
             $scope.subscriberCount = channel.statistics.subscriberCount;
         })
-        .catch(function(error) {
+        .catch(function (error) {
+            console.log('Error:', error);
+        });
+
+    var videosUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCWVIDWsXlOw1DQxpH_mlhFw&order=viewCount&maxResults=3&key=AIzaSyC7ASONDMW4_BuLUoFG0ZH5P3ixSvjiL7o';
+
+    $http.get(videosUrl)
+        .then(function (response) {
+            $scope.videosData = response.data.items;
+            var randomVideos = [];
+
+            angular.forEach(videosData, function (video) {
+                randomVideos.push({
+                    id: video.id.videoId,
+                    title: video.snippet.title,
+                    thumbnail: video.snippet.thumbnails.default.url
+                });
+            });
+
+            $scope.randomVideos = randomVideos;
+        })
+        .catch(function (error) {
             console.log('Error:', error);
         });
 });

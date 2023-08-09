@@ -152,11 +152,21 @@
     </div>
     <div ng-controller="youtubeController" class="container5">
         <h4>Youtube Channel</h4>
-        <div>
-            <img ng-src="{{ channelLogo }}" alt="Logo Channel" style="width: 150px; height: auto;">
-            <div style="display: flex; flex-direction: column; padding-top: 30px;">
-                <h2>{{ channelName }}</h2>
-                <p><span style="background-color: white; padding: 2px 5px; color: black;">{{ subscriberCount }}</span><span style="background-color: red; padding: 2px 5px;">Subscribers</span></p>
+        <div style="display: flex; align-items: center;">
+            <div>
+                <img ng-src="{{ channelLogo }}" alt="Logo Channel" style="width: 150px; height: auto;">
+                <div style="display: flex; flex-direction: column; padding-top: 50px;">
+                    <h2>{{ channelName }}</h2>
+                    <p><span style="background-color: white; padding: 2px 5px; color: black;">{{ subscriberCount }}</span><span style="background-color: red; padding: 2px 5px;">Subscribers</span></p>
+                </div>
+            </div>
+            <div class="video-list">
+                <div class="video m-1" ng-repeat="video in videosData">
+                    <a ng-href="https://www.youtube.com/watch?v={{ video.id.videoId }}" target="_blank">
+                        <img style="border-radius: 0px; width: 220px; height: auto; margin: 0px auto;" ng-src="{{ video.snippet.thumbnails.default.url }}" alt="Video Thumbnail">
+                        <h6 style="text-align: center;">{{ video.snippet.title }}</h6>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
