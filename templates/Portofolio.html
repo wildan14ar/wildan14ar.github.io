@@ -151,21 +151,14 @@
         </div>
     </div>
     <div ng-controller="youtubeController" class="container5">
-        <h4>Youtube Channel</h4>
+        <h4 style="margin-left: 25px;">Youtube Channel</h4>
         <div style="display: flex; align-items: center;">
             <div>
                 <img ng-src="{{ channelLogo }}" alt="Logo Channel" style="width: 150px; height: auto;">
                 <div style="display: flex; flex-direction: column; padding-top: 50px;">
-                    <h2>{{ channelName }}</h2>
-                    <p><span style="background-color: white; padding: 2px 5px; color: black;">{{ subscriberCount }}</span><span style="background-color: red; padding: 2px 5px;">Subscribers</span></p>
-                </div>
-            </div>
-            <div class="video-list">
-                <div class="video m-1" ng-repeat="video in videosData">
-                    <a ng-href="https://www.youtube.com/watch?v={{ video.id.videoId }}" target="_blank">
-                        <img style="border-radius: 0px; width: 220px; height: auto; margin: 0px auto;" ng-src="{{ video.snippet.thumbnails.default.url }}" alt="Video Thumbnail">
-                        <h6 style="text-align: center;">{{ video.snippet.title }}</h6>
-                    </a>
+                    <a href="https://www.youtube.com/channel/UCWVIDWsXlOw1DQxpH_mlhFw?sub_confirmation=1"><h2>{{ channelName }}</h2>
+                    <p><span style="background-color: white; padding: 2px 5px; color: black;">{{ subscriberCount
+                            }}</span><span style="background-color: red; padding: 2px 5px;">Subscribers</span></p></a>
                 </div>
             </div>
         </div>
@@ -203,32 +196,5 @@
             </div>
         </div>
     </div>
-    <footer style="background-color: var(--purple);">
-        <div style="text-align: left; ">
-            <div>
-                <h5>About</h5>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos inventore vel culpa facilis
-                    beatae, modi, fugit neque exercitationem laboriosam commodi expedita ipsam quae, quod quibusdam
-                    officiis! Exercitationem alias quaerat libero.</p>
-            </div>
-            <div>
-                <h5>Links</h5>
-                <a href="">Home</a>
-                <a href="">Portofolio</a>
-                <a href="">About</a>
-                <a href="">Experience</a>
-                <a href="">Contact</a>
-            </div>
-            <div>
-                <h5>Services</h5>
-            </div>
-            <div>
-                <h5>Have a Questions?</h5>
-            </div>
-        </div>
-        <hr style="width: 90%; margin: 20px auto; height: 2px;">
-        <br>
-        <h5>Thanks for Attention to of all, I'm happy for You</h5>
-        <p>Copyright &copy; 2022. WILDAN ABDURRASYID</p>
-    </footer>
+    <footer style="background-color: var(--purple);" ng-include="'templates/footer.htm'"></footer>
 </body>

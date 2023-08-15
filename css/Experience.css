@@ -1,0 +1,14 @@
+.container{
+    width: 85%;
+    height: 50px;
+    background-color: rgb(56, 26, 92);  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.container div{
+    width: calc(100%/3);
+    text-align: center;
+}
