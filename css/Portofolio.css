@@ -1,31 +1,3 @@
-.intro {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.intro div {
-    border: 6px solid var(--blue);
-    min-width: 45%;
-    min-height: 400px;
-    padding: 30px;
-    margin: 5vmax;
-    margin-top: 11vmax;
-    margin-right: 45%;
-}
-
-.intro ul {
-    padding: 10px 0px;
-    display: flex;
-}
-
-.intro i {
-    font-size: 25px;
-    margin: 0px 5px;
-
-}
-
 .container2 {
     background-color: var(--purple);
     width: 100%;
@@ -165,10 +137,6 @@ textarea {
 }
 
 @media only screen and (max-width: 600px) {
-    .intro div {
-        margin: 20px;
-    }
-
     .skill img {
         height: auto;
         width: 55px;

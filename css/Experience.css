@@ -1,6 +1,7 @@
 .container{
     width: 85%;
-    height: 50px;
+    max-width: 850px;
+    height: 40px;
     background-color: rgb(56, 26, 92);  
     display: flex;
     justify-content: space-between;
