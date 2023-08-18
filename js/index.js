@@ -19,15 +19,15 @@ app.controller('youtubeController', function ($scope, $http) {
         .then(function (response) {
             var channel = response.data.items[0];
 
-            localStorage.setItem("wildan14ar-name", channel.snippet.title);
-            localStorage.setItem("wildan14ar-url", channel.snippet.thumbnails.high.url);
-            localStorage.setItem("wildan14ar-subscriber", channel.statistics.subscriberCount);
+            var channels = `{"title":"${channel.snippet.title}", "url":"${channel.snippet.thumbnails.high.url}", "subscriber":"${channel.statistics.subscriberCount}"}`
+            localStorage.setItem("wildan14ar", channels);
         })
         .catch(function (error) {
             console.log('Error:', error);
         });
 
-    $scope.channelName = localStorage.getItem("wildan14ar-name");
-    $scope.channelLogo = localStorage.getItem("wildan14ar-url");
-    $scope.subscriberCount = localStorage.getItem("wildan14ar-subscriber");
+    Yt = JSON.parse(localStorage.getItem("wildan14ar"));
+    $scope.channelName = Yt.title;
+    $scope.channelLogo = Yt.url;
+    $scope.subscriberCount = Yt.subscriber;
 });
