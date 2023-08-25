@@ -86,4 +86,7 @@
   .address div{
     width: 95%;
   }
+  .Hub{
+    display: none;
+  }
 }

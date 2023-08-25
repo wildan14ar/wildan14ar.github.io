@@ -22,7 +22,7 @@
             <a href="#!About"><button class="btn btn-secondary">About</button></a>
         </div>
     </div>
-    <a href="#!Contact" style="position: fixed; bottom: 30px; right: 50px; z-index: 10;" data-bs-toggle="tooltip" data-bs-placement="top" title="Contact Me"><img src="img/contact.png" width="100px"></a>
+    <a href="#!Contact" class="Hub" style="position: fixed; bottom: 30px; right: 50px; z-index: 10;" data-bs-toggle="tooltip" data-bs-placement="top" title="Contact Me"><img src="img/contact.png" width="100px"></a>
     <div ng-controller="tabs" class="container3">
         <div class="tab box">
             <button  ng-class="{active: selectedTab === tab}" ng-repeat="tab in tabs" ng-click="selectTab(tab)">{{tab.title}}</button>

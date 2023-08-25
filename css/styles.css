@@ -9,6 +9,7 @@
 
 * {
     margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     list-style-type: none;
     color: white;
@@ -85,14 +86,14 @@ footer {
 
 footer div {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     padding: 20px;
 }
 
 footer div div {
     width: 25%;
-    min-width: 200px;
+    min-width:300px;
     padding: 15px;
     text-align: left;
     display: flex;
