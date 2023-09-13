@@ -9,13 +9,13 @@ iframe{
     padding: 30px 5px;
     padding-top: 100px;
     text-align: center;
+    margin: 0px auto;
 }
 
 .container ul {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    text-align: center;
     font-size: 50px;
 }
 

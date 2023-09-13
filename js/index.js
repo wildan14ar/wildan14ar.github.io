@@ -13,7 +13,7 @@ app.controller('tabs', function ($scope) {
 });
 
 app.controller('youtubeController', function ($scope, $http) {
-    var url = 'https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UCWVIDWsXlOw1DQxpH_mlhFw&key=AIzaSyC7ASONDMW4_BuLUoFG0ZH5P3ixSvjiL7o';
+    var url = 'https://www.googleapis.com/youtube/v3/search?channelId=UCWVIDWsXlOw1DQxpH_mlhFw&key=AIzaSyC7ASONDMW4_BuLUoFG0ZH5P3ixSvjiL7o&part=snippet&maxResults=10&q=-shorts';
 
     $http.get(url)
         .then(function (response) {
@@ -31,3 +31,101 @@ app.controller('youtubeController', function ($scope, $http) {
     $scope.channelLogo = Yt.url;
     $scope.subscriberCount = Yt.subscriber;
 });
+
+// Define the list of items
+Projects = [
+    {
+        title: "Scientific Calculator",
+        description: "Description for Item 2",
+        urlP: "/Scientific-Calculator",
+    },{
+        title: "Password Patter Validation",
+        description: "Description for Item 3",
+    },{
+        title: "Analog Clock",
+        description: "Description for Item 4",
+    },{
+        title: "Automatic image slider",
+        description: "Description for Item 5",
+    },{
+        title: "Calender",
+        description: "Description for Item 6",
+    },{
+        title: "Copy Script Codingan",
+        description: "Description for Item 7",
+    },{
+        title: "Digital Clock",
+        description: "Description for Item 8",
+    },{
+        title: "ROCK PAPER SCISSOR",
+        description: "Description for Item 9",
+        urlP: "/Rock-Paper-Scissor",
+    },{
+        title: "Text Editor in Website",
+        description: "Description for Item 10",
+    },{
+        title: "Typing Speed Test",
+        description: "Description for Item 11",
+        urlP: "Typing-Speed-Test",
+    },{
+        title: "Navbar Responsive",
+        description: "Description for Item 11",
+    },{
+        title: "Responsive Card Slider",
+        description: "Description for Item 11",
+    },{
+        title: "Music Player",
+        description: "Description for Item 11",
+        urlP: "/Music-Player",
+    },
+];
+
+app.controller('listPB', function($scope) {
+    $scope.Projects = Projects.sort(function(){return 0.5 - Math.random()});
+    
+});
+
+
+// Quotes = [
+//     {
+//         quote: "95% of WHAT YOU DO IS THE RESULT OF HABIT",
+//         bye: "bye: ARISTOTELE",
+//     },{
+//         quote: "NEET (Not in Education, Employment or Training)",
+//         bye: "",
+//     },{
+//         quote: "Kelahiran tidak bisa membuatmu jadi orang Hebat, Usahalah yang menentukan Hasilnya",
+//         bye: "",
+//     },{
+//         quote: "Selalu ada lebih dari Satu cara untuk mencapai tujuan",
+//         bye: "",
+//     },{
+//         quote: "Apa yang kamu Ucapkan semua itu adalah DO'A",
+//         bye: "",
+//     },{
+//         quote: "Tidak ada kata Beruntung",
+//         bye: "",
+//     },{
+//         quote: "Kuatkan Akidah agar Pondasinya kuat",
+//         bye: "",
+//     },{
+//         quote: 'Jika kamu mengejar Kesuksesan di "Akhirat". InsyaAllah, Kesuksesan dunia yang akan mengejar kamu',
+//         bye: "",
+//     },{
+//         quote: "Ketika kita beramal sebuah Kebaikan. Maka, Kebaikan itu akan kembali ke kita",
+//         bye: "",
+//     }
+// ];
+
+// app.controller('Quotes', function($scope, $element) {
+//     $scope.Quotes = Quotes.sort(function(){return 0.5 - Math.random()});
+//     $scope.prev = function() {
+//         var widthItem = $element.find('.cards').offsetWidth;
+//         $element.find('#quote').scrollLeft -= widthItem;
+//     };
+//     $scope.next = function() {
+//         var widthItem = $element.find('.cards').offsetWidth;
+//         $element.find('#quote').scrollLeft += widthItem;
+//     };
+// });
+
