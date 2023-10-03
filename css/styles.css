@@ -20,37 +20,9 @@ a {
     text-decoration: none;
 }
 
-
 body {
     background-color: var(--main);
     min-height: 110vh;
-}
-
-.intro {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.intro div {
-    border: 6px solid var(--blue);
-    min-width: 45%;
-    min-height: 400px;
-    padding: 30px;
-    margin: 3vmax;
-    margin-top: 9vmax;
-    margin-right: 45%;
-}
-
-.intro ul {
-    padding: 10px 0px;
-    display: flex;
-}
-
-.intro i {
-    font-size: 25px;
-    margin: 0px 5px;
 }
 
 .navbar a{
