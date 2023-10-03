@@ -1,5 +1,5 @@
 <nav class="navbar-expand-sm navbar navbar-dark ">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="#/!">
         <img src="img/war2.png" alt="Avatar Logo" style="width: 80px;">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -16,18 +16,21 @@
             <li class="nav-item">
                 <a class="nav-link" href="#!About">About</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Experience
-                </a>
-                <ul class="dropdown-menu bg-dark">
-                    <li><a class="dropdown-item text-light" href="#!Experience">Experience</a></li>
-                    <li><a class="dropdown-item text-light" href="#!Project">Project</a></li>
-                    <li><a class="dropdown-item text-light" href="#!Blog">Blog</a></li>
-                </ul>
+            <li class="nav-item">
+                <a class="nav-link" href="#!Project">Project</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#!Blog">Blog</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#!Contact">Contact</a>
             </li>
+        </ul>
+        <ul class="navbar-nav mode">
+            <label id="switch" class="switch">
+                <input type="checkbox" ng-model="isLightMode" id="slider">
+                <span class="slider round"></span>
+            </label>
         </ul>
     </div>
 </nav>

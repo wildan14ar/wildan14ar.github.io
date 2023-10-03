@@ -41,10 +41,6 @@
                     templateUrl: "templates/About.html",
                     controller: 'AboutController'
                 })
-                .when("/Experience", {
-                    templateUrl: "templates/Experience.html",
-                    controller: 'ExperienceController'
-                })
                 .when("/Project", {
                     templateUrl: "templates/Project.html",
                     controller: 'ProjectController'
@@ -71,10 +67,6 @@
         app.controller('AboutController', function ($scope, $rootScope) {
             // Set judul halaman
             $rootScope.title = 'Wildan14AR | About';
-        });
-        app.controller('ExperienceController', function ($scope, $rootScope) {
-            // Set judul halaman
-            $rootScope.title = 'Wildan14AR | Experience';
         });
         app.controller('ProjectController', function ($scope, $rootScope) {
             // Set judul halaman
