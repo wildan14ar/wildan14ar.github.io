@@ -3,11 +3,6 @@
   width: 50%;
 }
 
-.container2 img{
-  border-radius: 0px 30px;
-  margin-top: -15px;
-}
-
 .container2, .container3, .container4{
   width: 96%;
   margin: 20px auto;
@@ -15,6 +10,21 @@
   background-color: var(--dark);
   padding: 20px;
   display: flex;
+}
+
+.container2{
+  flex-direction: column;
+  text-align: center;
+}
+
+.container2 div{
+  margin: 10px auto;
+}
+
+.container2 img{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
 }
 
 /* Style the tab */

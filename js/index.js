@@ -32,18 +32,6 @@ app.controller('youtubeController', function ($scope, $http) {
     $scope.subscriberCount = Yt.subscriber;
 });
 
-app.controller('videoController', function ($scope, $http) {
-    var url = 'https://www.googleapis.com/youtube/v3/search?channelId=UCWVIDWsXlOw1DQxpH_mlhFw&key=AIzaSyC7ASONDMW4_BuLUoFG0ZH5P3ixSvjiL7o&part=snippet&maxResults=100&type=video&q=-shorts';
-
-    $http.get(url)
-        .then(function (response) {
-            var videos = response.data.items[0];
-        })
-        .catch(function (error) {
-            console.log('Error:', error);
-        });
-});
-
 // Define the list of items
 Projects = [
     {
@@ -92,9 +80,31 @@ Projects = [
     },
 ];
 
+// app.controller('listPB', function ($scope, $http) {
+//     var url = 'https://www.googleapis.com/youtube/v3/search?channelId=UCWVIDWsXlOw1DQxpH_mlhFw&key=AIzaSyC7ASONDMW4_BuLUoFG0ZH5P3ixSvjiL7o&part=snippet&maxResults=100&type=video&q=-shorts';
+
+//     $http.get(url)
+//         .then(function (response) {
+//             var videos = response.data.items;
+
+//             for (let video in videos) {
+//                 vid = video.snippet.title.slice(0,10);
+//                 x = 0;
+//                 for (let project in Projects) {
+//                     x += 1;
+//                     if (project.title.match(vid)) {
+//                         Projects[x]["urlT"] = video.snippet.thumbnails.high.url;
+//                     }
+//                 }
+//             }
+//         })
+//         .catch(function (error) {
+//             console.log('Error:', error);
+//         });
+// });
+
 app.controller('listPB', function($scope) {
     $scope.Projects = Projects.sort(function(){return 0.5 - Math.random()});
-    
 });
 
 
