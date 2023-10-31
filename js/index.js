@@ -38,40 +38,13 @@ Projects = [
         description: "Description for Item 2",
         urlP: "/Scientific-Calculator",
     },{
-        title: "Password Patter Validation",
-        description: "Description for Item 3",
-    },{
-        title: "Analog Clock",
-        description: "Description for Item 4",
-    },{
-        title: "Automatic image slider",
-        description: "Description for Item 5",
-    },{
-        title: "Calender",
-        description: "Description for Item 6",
-    },{
-        title: "Copy Script Codingan",
-        description: "Description for Item 7",
-    },{
-        title: "Digital Clock",
-        description: "Description for Item 8",
-    },{
         title: "ROCK PAPER SCISSOR",
         description: "Description for Item 9",
         urlP: "/Rock-Paper-Scissor",
     },{
-        title: "Text Editor in Website",
-        description: "Description for Item 10",
-    },{
         title: "Typing Speed Test",
         description: "Description for Item 11",
         urlP: "Typing-Speed-Test",
-    },{
-        title: "Navbar Responsive",
-        description: "Description for Item 11",
-    },{
-        title: "Responsive Card Slider",
-        description: "Description for Item 11",
     },{
         title: "Music Player",
         description: "Description for Item 11",
@@ -79,33 +52,21 @@ Projects = [
     },
 ];
 
-// app.controller('listPB', function ($scope, $http) {
-//     var url = 'https://www.googleapis.com/youtube/v3/search?channelId=UCWVIDWsXlOw1DQxpH_mlhFw&key=AIzaSyC7ASONDMW4_BuLUoFG0ZH5P3ixSvjiL7o&part=snippet&maxResults=100&type=video&q=-shorts';
-
-//     $http.get(url)
-//         .then(function (response) {
-//             var videos = response.data.items;
-
-//             for (let video in videos) {
-//                 vid = video.snippet.title.slice(0,10);
-//                 x = 0;
-//                 for (let project in Projects) {
-//                     x += 1;
-//                     if (project.title.match(vid)) {
-//                         Projects[x]["urlT"] = video.snippet.thumbnails.high.url;
-//                     }
-//                 }
-//             }
-//         })
-//         .catch(function (error) {
-//             console.log('Error:', error);
-//         });
-// });
-
 app.controller('listPB', function($scope) {
     $scope.Projects = Projects.sort(function(){return 0.5 - Math.random()});
 });
 
+app.controller('lVideo', function ($scope, $http) {
+    var url = 'https://www.googleapis.com/youtube/v3/search?channelId=UCWVIDWsXlOw1DQxpH_mlhFw&key=AIzaSyC7ASONDMW4_BuLUoFG0ZH5P3ixSvjiL7o&part=snippet&maxResults=100&type=video&q=-shorts';
+
+    $http.get(url)
+        .then(function (response) {
+            $scope.videos = response.data.items;
+        })
+        .catch(function (error) {
+            console.log('Error:', error);
+        });
+});
 
 // Quotes = [
 //     {

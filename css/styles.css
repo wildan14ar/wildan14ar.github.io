@@ -160,8 +160,4 @@ footer div div {
         text-align: center;
         flex-direction: column;
     }
-
-    .intro div {
-        margin: 20px;
-    }
 }

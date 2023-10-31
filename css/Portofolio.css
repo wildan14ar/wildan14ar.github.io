@@ -181,4 +181,8 @@ textarea {
         width: 95%;
         margin: 10px auto;
     }
+
+    .intro div {
+        margin: 20px;
+    }
 }
